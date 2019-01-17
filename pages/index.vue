@@ -1,4 +1,49 @@
 <template>
+  <section class="container">
+    <nuxt-link v-for="post in posts" :key="post.id" to="post.id">
+      <article class="post-preview">
+        <div
+         :style ={backgroundImage": post.thumbnailUrl"}
+         class="post-preview-thumbnail"></div>
+      </article>
+    </nuxt-link>
+  </section>
+</template>
+
+
+
+<script>
+export default {
+  data() {
+    return {
+      posts: [
+        {
+          title: 'A New Beggining',
+          previewText: 'This will be awesome',
+          thumbnailUrl:
+            'https://images.unsplash.com/photo-1543363136-3fdb62e11be5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+          id: 'a-new-beggining'
+        },
+        {
+          title: 'A New Start',
+          previewText: 'This will be really awesome',
+          thumbnailUrl:
+            'https://images.unsplash.com/photo-1519144988803-2f7c8ceb98ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+          id: 'a-new-start'
+        }
+      ]
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+<!--<template>
   <v-layout
     column
     justify-center
@@ -50,16 +95,17 @@
       </v-card>
     </v-flex>
   </v-layout>
-</template>
-
+</template>-->
+<!--
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+//import Logo from '~/components/Logo.vue'
+//import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
-export default {
+/* export default {
   components: {
     Logo,
     VuetifyLogo
   }
-}
-</script>
+} */
+</script> 
+-->
