@@ -1,12 +1,38 @@
 <template>
-  <section class="container"></section>
+  <section id="posts">
+    <postPreview
+      v-for="post in posts"
+      :key="post.id"
+      :title="post.title"
+      :excerpt="post.previewText"
+      :thumbnailImage="post.thumbnailUrl"
+      :id="post.id"
+    />
+  </section>
 </template>
 
 
 
 <script>
+import PostPreview from '@/components/Blog/PostPreview'
+
 export default {
-  data() {
+  components: {
+    PostPreview
+  },
+
+  asyncData(context) {
+    return context.app.$storyapi
+      .get('cdn/stories', {
+        version: 'draft',
+        starts_with: 'blog/'
+      })
+      .then(res => {
+        console.log(res)
+        return res
+      })
+  }
+  /* data() {
     return {
       posts: [
         {
@@ -25,10 +51,25 @@ export default {
         }
       ]
     }
-  }
+  } */
 }
 </script>
 
+<style scoped>
+#posts {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 35rem) {
+  #posts {
+    flex-direction: row;
+  }
+}
+</style>
 
 
 
