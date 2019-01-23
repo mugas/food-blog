@@ -1,13 +1,5 @@
 <template>
-  <section class="container">
-    <nuxt-link v-for="post in posts" :key="post.id" to="post.id">
-      <article class="post-preview">
-        <div
-         :style ={backgroundImage": post.thumbnailUrl"}
-         class="post-preview-thumbnail"></div>
-      </article>
-    </nuxt-link>
-  </section>
+  <section class="container"></section>
 </template>
 
 
