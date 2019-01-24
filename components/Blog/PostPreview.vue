@@ -44,7 +44,7 @@ a {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
   width: 90%;
   height: 20rem;
-  margin: 1rem auto;
+  margin: 1rem;
 }
 
 .post-preview-thumbnail {
