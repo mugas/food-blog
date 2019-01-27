@@ -5,7 +5,7 @@
       :key="post.id"
       :title="post.title"
       :excerpt="post.previewText"
-      :thumbnailImage="post.thumbnailUrl"
+      :thumbnail-image="post.thumbnailUrl"
       :id="post.id"
     />
   </section>
@@ -29,6 +29,7 @@ export default {
       })
       .then(res => {
         console.log(res)
+
         return {
           posts: res.data.stories.map(bp => {
             return {
