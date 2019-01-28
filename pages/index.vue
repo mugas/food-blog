@@ -5,7 +5,7 @@
       :key="post.id"
       :title="post.title"
       :excerpt="post.previewText"
-      :thumbnail-image="post.thumbnailUrl"
+      :thumbnailImage="post.thumbnailUrl"
       :id="post.id"
     />
   </section>
@@ -35,8 +35,8 @@ export default {
             return {
               id: bp.slug,
               title: bp.content.title,
-              previewText: bp.content.summary,
-              thumbnailUrl: bp.content.thumbnail
+              previewText: bp.content.Summary,
+              thumbnailUrl: bp.content.Thumbnail
             }
           })
         }
