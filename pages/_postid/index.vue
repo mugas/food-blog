@@ -1,8 +1,10 @@
 <template>
   <div id="post">
-    <div class="post-thumbnail">
-      <h1></h1>
-      <p></p>
+    <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}">
+      <section class="post-content">
+        <h1>{{ title }}</h1>
+        <p>{{ content }}</p>
+      </section>
     </div>
   </div>
 </template>
@@ -12,13 +14,35 @@
 export default {
   asyncData(context) {
     return context.app.$storyapi
-      .get('cdn/stories/' + context.params.postId, {
+      .get('cdn/stories/blog/' + context.params.postId, {
         version: 'draft'
       })
       .then(res => {
-        console.log(res.data)
+        return {
+          image: res.data.story.content.Thumbnail,
+          title: res.data.story.content.title,
+          content: res.data.story.content.content
+        }
       })
   }
 }
 </script>
 
+<style>
+.post-thumbnail {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.post-content {
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.post-content {
+  white-space: pre-line;
+}
+</style>
