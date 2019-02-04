@@ -18,6 +18,7 @@ export default {
         version: 'draft'
       })
       .then(res => {
+        console.log(res.data)
         return {
           blok: res.data.story.content,
           image: res.data.story.content.Thumbnail,
@@ -25,9 +26,6 @@ export default {
           content: res.data.story.content.content
         }
       })
-  },
-  mounted() {
-    this.$storyblok.init()
   }
 }
 </script>
