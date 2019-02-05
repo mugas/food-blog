@@ -15,7 +15,7 @@ export default {
   asyncData(context) {
     return context.app.$storyapi
       .get('cdn/stories/blog/' + context.params.postId, {
-        version: 'draft'
+        version: process.env.NODE_ENV == 'production' ? 'published' : 'draft'
       })
       .then(res => {
         console.log(res.data)
@@ -26,10 +26,10 @@ export default {
           content: res.data.story.content.content
         }
       })
-  },
-  mounted(){
-    this.$storyblok.init()
   }
+  /* mounted(){
+    this.$storyblok.init()
+  } */
 }
 </script>
 
