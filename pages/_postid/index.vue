@@ -26,6 +26,9 @@ export default {
           content: res.data.story.content.content
         }
       })
+  },
+  mounted(){
+    this.$storyblok.init()
   }
 }
 </script>
