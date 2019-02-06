@@ -65,7 +65,7 @@ module.exports = {
   ],
   generate: {
     routes: function() {
-      axios
+      return axios
         .get(
           'https://api.storyblok.com/v1/cdn/stories?version=published&token=pJxjgbPd0sft9g3rDdHVbgtt&starts_with=blog&cv=' +
             Math.floor(Date.now() / 1e3)
