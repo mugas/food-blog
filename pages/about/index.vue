@@ -1,6 +1,7 @@
 <template>
   <section id="about-page" v-editable="blok">
     <h1>{{ title }}</h1>
+    <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
     <p>{{ content }}</p>
   </section>
 </template>
@@ -16,6 +17,7 @@ export default {
         console.log(res.data)
         return {
           blok: res.data.story.content,
+          image: res.data.story.content.Image,
           title: res.data.story.content.Title,
           content: res.data.story.content.Content
         }
@@ -33,6 +35,13 @@ export default {
 
 #about-page p {
   white-space: pre-line;
+}
+
+.post-thumbnail {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
 }
 </style>
 

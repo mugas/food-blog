@@ -1,11 +1,10 @@
 <template>
   <div id="post" v-editable="blok">
-    <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}">
-      <section class="post-content">
-        <h1>{{ title }}</h1>
-        <p>{{ content }}</p>
-      </section>
-    </div>
+    <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
+    <section class="post-content">
+      <h1>{{ title }}</h1>
+      <p>{{ content }}</p>
+    </section>
   </div>
 </template>
 
