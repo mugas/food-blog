@@ -2,9 +2,9 @@
 
 > a food blog
 
-## Build Setup
+## Build Setups
 
-``` bash
+```bash
 # install dependencies
 $ npm install
 
