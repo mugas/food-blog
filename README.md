@@ -1,22 +1,6 @@
 # FoodBlog
 
-> a food blog
+Project that will be my website for Good Stuff Foods - A food Blog.
+It is based on a tutorial but new features will be uptaded.
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+It is made with Nuxt.js and Storyblok as headless CMS.

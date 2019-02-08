@@ -27,8 +27,12 @@ export default {
         }
       })
   }
-  /* mounted(){
+  /* mounted() {
+    
     this.$storyblok.init()
+    this.$storyblok.on('change', () => {
+      location.reload(true)
+    })
   } */
 }
 </script>
