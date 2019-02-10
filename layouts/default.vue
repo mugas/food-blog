@@ -28,6 +28,7 @@ export default {
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
+  width: 100%;
 }
 
 .main-content {
