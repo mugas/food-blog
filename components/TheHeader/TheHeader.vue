@@ -3,6 +3,12 @@
     <nav class="main-nav">
       <ul class="nav-links">
         <!--Alouds you to link a nuxt link to other page-->
+        <nuxt-link to="/" tag="li" class="nav-link">
+          <!-- <img class="image-header" src="../../static/favicon.png"> -->
+          <a>
+            <img class="image-header" src="../../static/Logomailch.png">
+          </a>
+        </nuxt-link>
         <nuxt-link to="/blog" tag="li" class="nav-link">
           <a>All Posts</a>
         </nuxt-link>
@@ -21,7 +27,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  /*  background: #022d30; */
+  /* background: #022d30; */
   height: 4.5rem;
 }
 
@@ -29,6 +35,10 @@
   height: 100%;
 }
 
+.image-header {
+  width: 47px;
+  height: 47px;
+}
 .nav-links {
   list-style: none;
   margin: 0;
@@ -54,7 +64,7 @@
 .nav-link a {
   display: block;
   text-decoration: none;
-  color: white;
+  color: #7d180c;
 }
 
 .nav-link a:hover,
