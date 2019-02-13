@@ -3,7 +3,7 @@
     <nav class="main-nav">
       <ul class="nav-links">
         <!--Alouds you to link a nuxt link to other page-->
-        <nuxt-link to="/" tag="li" class="nav-link">
+        <nuxt-link to="#" tag="li" class="nav-link">
           <!-- <img class="image-header" src="../../static/favicon.png"> -->
           <a>
             <img class="image-header" src="../../static/Logomailch.png">

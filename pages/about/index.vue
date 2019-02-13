@@ -39,7 +39,7 @@ export default {
 
 .post-thumbnail {
   width: 100%;
-  height: 300px;
+  height: 500px;
   background-size: cover;
   background-position: center;
 }
