@@ -1,7 +1,7 @@
-const pkg = require('./package')
-const axios = require('axios')
+import pkg from './package'
+import axios from 'axios'
 
-module.exports = {
+export default {
   mode: 'universal',
 
   /*

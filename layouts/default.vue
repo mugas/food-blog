@@ -2,9 +2,9 @@
  
  <template>
   <div>
-    <TheHeader/>
+    <TheHeader />
     <main class="main-content">
-      <nuxt/>
+      <nuxt />
     </main>
   </div>
 </template>
