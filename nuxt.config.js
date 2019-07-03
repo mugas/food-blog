@@ -61,7 +61,8 @@ export default {
             : 'BapQFYgR7K2yK2wXaSIYlQtt',
         cacheProvider: 'memory'
       }
-    ]
+    ],
+    ['nuxt-netlify-cms', { adminPath: 'secure' }]
   ],
   generate: {
     routes: function() {
